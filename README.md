@@ -10,8 +10,6 @@
 	
   <img src="https://img.shields.io/github/languages/count/exodogurgel/SpaUniverse" alt="languages" />
 	
-  <img src="https://img.shields.io/github/repo-size/exodogurgel/SpaUniverse" alt="size" />
-	
   <img alt="Github License" src="https://img.shields.io/github/license/exodogurgel/SpaUniverse" />
 
   
