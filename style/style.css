@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #353535;
+  --primary-color: #e1e1e6;
+
+  font-size: 62.5%;
+}
+
+body * {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+
+  overflow: hidden;
+}
+
+nav {
+  padding: 4rem 0 4rem 7.2rem;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+nav ul {
+  list-style: none;
+
+  display: flex;
+  gap: 4.2rem;
+}
+
+nav ul li {
+  font-size: clamp(1.4rem, 1rem + 1vw, 2.1rem);
+  line-height: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #c4c4cc;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+  color: white;
+}
+
+#app {
+  margin-top: 6.3rem;
+  margin-inline: 10.2rem;
+}
+
+#app h1 {
+  font-size: 4.8rem;
+  line-height: 6rem;
+  color: var(--primary-color);
+  margin-bottom: 1.6rem;
+}
+
+#app p {
+  font-size: 1.8rem;
+  line-height: 2.9rem;
+  color: var(--primary-color);
+
+  max-width: 64.8rem;
+
+  animation: downTop 1s ease-in-out 0.5s backwards;
+}
+
+.bg-home {
+  background: url('/assets/mountains-universe-1\ 1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  animation: zoom-out 1s;
+  animation-timing-function: ease-in-out;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+
+  height: 40vh;
+}
+
+#home h2 {
+  font-size: 4.8rem;
+  line-height: 6rem;
+  color: var(--primary-color);
+  margin-bottom: 1.6rem;
+
+  animation: opacity-on 1s ease-in-out;
+}
+
+#home a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  padding: 1.2rem 3.2rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 33;
+
+  transition: all 0.2s;
+}
+
+#home a:hover {
+  background-color: white;
+  color: #02799d;
+}
+
+.bg-the-universe {
+  background: url('/assets/mountains-universe-2.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  animation: bg-out 50s;
+  animation-iteration-count: infinite;
+}
+
+.bg-exploration {
+  background: url('/assets/mountains-universe-3.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  animation: zoom-in 50s alternate;
+  animation-iteration-count: infinite;
+}
+
+.bg-404 {
+  background: url('https://images.unsplash.com/photo-1472712739516-7ad2b786e1f7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  animation: bg-out 50s;
+  animation-iteration-count: infinite;
+}
+
+#app h1,
+#app .button {
+  animation: downTop 1s ease-in-out forwards;
+}
+
+@keyframes opacity-on {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bg-out {
+  0% {
+    background-size: 130%;
+  }
+
+  50% {
+    background-size: 100%;
+  }
+
+  100% {
+    background-size: 130%;
+  }
+}
+
+@keyframes zoom-in {
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(2);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes downTop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
